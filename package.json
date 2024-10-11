@@ -1,0 +1,26 @@
+{
+    "name": "magic-dollar-seeds",
+    "description": "The Magic Dollar Seeds Game",
+    "version": "1.0.0",
+    
+    "author": "Peter",
+    "license": "MIT",
+    "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+    
+    "scripts": {
+        "dev": "vite --config vite/config.dev.mjs",
+        "build": "vite build --config vite/config.prod.mjs"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.12.0",
+        "@types/eslint__js": "^8.42.3",
+        "eslint": "^9.12.0",
+        "terser": "^5.31.0",
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.8.1",
+        "vite": "^5.3.1"
+    },
+    "dependencies": {
+        "phaser": "^3.85.2"
+    }
+}

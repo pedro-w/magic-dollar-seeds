@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="133.15625mm"
+   height="99.554169mm"
+   viewBox="0 0 133.15625 99.554169"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="public/assets/logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="33"
+     inkscape:cy="181"
+     inkscape:window-width="1920"
+     inkscape:window-height="980"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="3"
+       y="-26"
+       width="333"
+       height="316"
+       id="rect406" />
+    <filter
+       y="-0.1767405"
+       height="1.353481"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       style="color-interpolation-filters:sRGB"
+       id="filter1048"
+       x="-0.12131816"
+       width="1.2426363">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur1038" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite1040" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite1042" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix1044" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend1046" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-34.889584,-4.9916669)">
+    <path
+       id="rect462"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-dasharray:none;filter:url(#filter1048);stop-color:#000000"
+       d="m 73.629468,17.991667 c -8.214933,0 -14.828412,6.143729 -14.828412,13.775162 v 0.519817 c 0,6.436993 4.705438,11.81568 11.108194,13.341643 -2.877936,2.509591 -4.673222,6.076992 -4.673222,10.050142 v 0.519816 c 0,2.67619 0.815773,5.167955 2.226229,7.277445 h -4.744262 c -8.214932,0 -14.828411,6.14373 -14.828411,13.775161 v 0.519819 c 0,7.631431 6.613479,13.775162 14.828411,13.775162 h 60.152985 c 8.21494,0 14.82842,-6.143731 14.82842,-13.775162 v -0.519819 c 0,-2.676188 -0.81578,-5.167954 -2.22623,-7.277444 h 4.74426 c 8.21494,0 14.82841,-6.14373 14.82841,-13.775162 v -0.519816 c 0,-7.631434 -6.61347,-13.775163 -14.82841,-13.775163 h -4.75683 c 2.59845,-2.479002 4.19726,-5.867174 4.19726,-9.616622 v -0.519817 c 0,-7.631433 -6.61348,-13.775162 -14.82841,-13.775162 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+       x="65.881248"
+       y="42.862499"
+       id="text236"><tspan
+         sodipodi:role="line"
+         id="tspan234"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+         x="65.881248"
+         y="42.862499">Magic</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+       x="77.258331"
+       y="65.087502"
+       id="text240"><tspan
+         sodipodi:role="line"
+         id="tspan238"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+         x="77.258331"
+         y="65.087502">Dollar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+       x="59.26667"
+       y="87.04792"
+       id="text294"><tspan
+         sodipodi:role="line"
+         id="tspan292"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'Hobo Std';-inkscape-font-specification:'Hobo Std';stroke-width:0.264583"
+         x="59.26667"
+         y="87.04792">Seeds</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text404"
+       style="font-size:24px;line-height:1.25;font-family:Cracked;-inkscape-font-specification:Cracked;white-space:pre;shape-inside:url(#rect406)" />
+  </g>
+</svg>

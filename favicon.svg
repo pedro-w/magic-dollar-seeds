@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="86.324997mm"
+   height="87.647919mm"
+   viewBox="0 0 86.324997 87.647919"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="37.093864"
+   inkscape:export-ydpi="37.093864"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="186"
+     inkscape:cy="228"
+     inkscape:window-width="1082"
+     inkscape:window-height="716"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       y="-0.21087492"
+       height="1.4217498"
+       inkscape:menu-tooltip="Darkens the edge with an inner blur and adds a flexible glow"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Dark and Glow"
+       style="color-interpolation-filters:sRGB"
+       id="filter364"
+       x="-0.21549939"
+       width="1.4309988">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result6"
+         id="feGaussianBlur354" />
+      <feComposite
+         result="result8"
+         in="SourceGraphic"
+         operator="atop"
+         in2="result6"
+         id="feComposite356" />
+      <feComposite
+         result="result9"
+         operator="over"
+         in2="SourceAlpha"
+         in="result8"
+         id="feComposite358" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         result="result10"
+         id="feColorMatrix360" />
+      <feBlend
+         in="result10"
+         mode="normal"
+         in2="result6"
+         id="feBlend362" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-57.908333,-93.3625)">
+    <path
+       id="path234"
+       style="fill:#ffffff;stroke:#000000;stroke-width:2;filter:url(#filter364);stop-color:#000000"
+       d="m 90.619792,106.3625 a 19.711458,14.611357 0 0 0 -19.711459,14.61151 19.711458,14.611357 0 0 0 19.711459,14.611 19.711458,14.611357 0 0 0 2.250508,-0.10439 19.711458,14.611357 0 0 0 2.48512,3.64422 19.711458,14.611357 0 0 0 -4.206462,-0.33693 19.711458,14.611357 0 0 0 -19.711458,14.611 19.711458,14.611357 0 0 0 19.711458,14.61151 19.711458,14.611357 0 0 0 19.711462,-14.61151 19.711458,14.611357 0 0 0 -3.54501,-8.34316 19.711458,14.611357 0 0 0 4.20646,0.33693 19.711458,14.611357 0 0 0 19.71146,-14.611 19.711458,14.611357 0 0 0 -19.71146,-14.61151 19.711458,14.611357 0 0 0 -2.23965,0.10387 19.711458,14.611357 0 0 0 -18.662428,-9.91154 z" />
+  </g>
+</svg>
