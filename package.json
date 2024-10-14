@@ -2,6 +2,9 @@
     "name": "magic-dollar-seeds",
     "description": "The Magic Dollar Seeds Game",
     "version": "1.0.0",
+
+    "homepage":"https://github.com/pedro-w/magic-dollar-seeds",
+    "bugs":{"url":"https://github.com/pedro-w/magic-dollar-seeds/issues"},
     
     "author": "Peter",
     "license": "MIT",
