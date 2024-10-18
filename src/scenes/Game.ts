@@ -29,6 +29,7 @@ export class Game extends Scene {
         this.spend = this.add.image(920, 50, 'spend').setDepth(1).setScrollFactor(0).setVisible(false).setInteractive()
         this.spend.on('pointerdown', () => { this.onSpend() })
         this.stuck = this.add.image(500, 100, 'stuck').setDepth(1).setScrollFactor(0).setVisible(false).setInteractive()
+        this.tiles = []
         for (let j = 0; j < 15; ++j) {
             for (let i = 0; i < 30; ++i) {
                 const name = `TILE-${i + 30 * j}`
@@ -43,6 +44,7 @@ export class Game extends Scene {
         this.camera.startFollow(this.player.image)
         this.input.on('pointerdown', () => { this.onClick() })
     }
+    
     onSpend() {
         if (this.dollars >= MINSPEND) {
             this.dollars -= MINSPEND
