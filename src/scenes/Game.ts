@@ -3,7 +3,7 @@ import { FloorTile } from '../FloorTile';
 import { Player } from '../Player';
 import { unmapxy, valid_move } from '../util';
 
-const MINSPEND=40
+const MINSPEND = 40
 
 export class Game extends Scene {
     camera: Phaser.Cameras.Scene2D.Camera;
@@ -14,11 +14,32 @@ export class Game extends Scene {
     spend: Phaser.GameObjects.Image
     stuck: Phaser.GameObjects.Image
     _dollars = 0
+    cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 
     constructor() {
         super('Game');
     }
+    init() {
+        // Also bind the cursor keys (if possible)
+        this.cursors = this.input.keyboard?.createCursorKeys()
+        if (this.cursors != null) {
+            this.cursors.down.on(Phaser.Input.Keyboard.Events.DOWN, () => {
+                this.moveTo(this.player.tileX, this.player.tileY + 1)
+            })
+            this.cursors.up.on(Phaser.Input.Keyboard.Events.DOWN, () => {
+                this.moveTo(this.player.tileX, this.player.tileY - 1)
+            })
+            this.cursors.left.on(Phaser.Input.Keyboard.Events.DOWN, () => {
+                this.moveTo(this.player.tileX - 1, this.player.tileY)
+            })
+            this.cursors.right.on(Phaser.Input.Keyboard.Events.DOWN, () => {
+                this.moveTo(this.player.tileX + 1, this.player.tileY)
+            })
+            this.cursors.space.on(Phaser.Input.Keyboard.Events.DOWN, () => { this.onSpend() })
+        }
+        this.input.on('pointerdown', () => { this.onClick() })
 
+    }
     create() {
         this.camera = this.cameras.main;
         this.camera.setBackgroundColor(0x101010);
@@ -42,9 +63,9 @@ export class Game extends Scene {
         this.dollars = 0
         this.player = new Player(this, 15, 7);
         this.camera.startFollow(this.player.image)
-        this.input.on('pointerdown', () => { this.onClick() })
+
     }
-    
+
     onSpend() {
         if (this.dollars >= MINSPEND) {
             this.dollars -= MINSPEND
@@ -64,16 +85,23 @@ export class Game extends Scene {
         if (tileX != null && tileY != null) {
             const newx = Math.round(tileX)
             const newy = Math.round(tileY)
-            if (valid_move(this.player.tileX, this.player.tileY, newx, newy)) {
-                const new_tile = this.getTile(newx, newy)
-                if (!new_tile?.hole) {
-                    this.add.tween({ targets: this.player, props: { tileX: newx, tileY: newy }, duration: 500, onComplete: () => this.onMoveComplete() })
-                    const tile = this.getTile(this.player.tileX, this.player.tileY)
-                    tile?.setHasSeed(true)
-                }
+            this.moveTo(newx, newy);
+        }
+    }
+    // Attempt to move to (newx, newy)
+    // May not be allowed if it is too far away or there is a hole
+    // If allowed, run the appropriate actions
+    private moveTo(newx: number, newy: number) {
+        if (valid_move(this.player.tileX, this.player.tileY, newx, newy)) {
+            const new_tile = this.getTile(newx, newy);
+            if (!new_tile?.hole) {
+                this.add.tween({ targets: this.player, props: { tileX: newx, tileY: newy }, duration: 500, onComplete: () => this.onMoveComplete() });
+                const tile = this.getTile(this.player.tileX, this.player.tileY);
+                tile?.setHasSeed(true);
             }
         }
     }
+
     isStuck() {
         const neighbours = this.getNeighbours()
         return neighbours.every((n) => n == null || n.hole)
@@ -140,14 +168,14 @@ export class Game extends Scene {
     }
     set dollars(v) {
         this.tweens.addCounter({ from: this._dollars, to: v, onUpdate: (t) => { const v = Math.round(t.getValue()); this.score.setText(`$${v}`) } })
-        if (this._dollars>=MINSPEND && v < MINSPEND) {
+        if (this._dollars >= MINSPEND && v < MINSPEND) {
             // can't spend any more
-            this.add.tween({targets: this.spend, props:{alpha: 0}, onComplete: ()=>{this.spend.setVisible(false)}})
+            this.add.tween({ targets: this.spend, props: { alpha: 0 }, onComplete: () => { this.spend.setVisible(false) } })
         }
-        if (this._dollars < MINSPEND && v >=MINSPEND) {
+        if (this._dollars < MINSPEND && v >= MINSPEND) {
             // we can spend
             this.spend.setVisible(true)
-            this.add.tween({targets: this.spend, props:{alpha: 1}})
+            this.add.tween({ targets: this.spend, props: { alpha: 1 } })
         }
         this._dollars = v
     }
