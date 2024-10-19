@@ -115,6 +115,13 @@ export class Game extends Scene {
                 pick?.setHole(true).setHasDollar(false).setHasSeed(false)
             }
             if (this.isStuck() && this.dollars < MINSPEND) {
+                // Stuck. Automatically pick up any gems.
+                for (const tile of this.tiles) {
+                    if (tile.hasDollar) {
+                        tile.hasDollar = false
+                        this.dollars += 10
+                    }
+                }
                 this.stuck.setVisible(true)
                 this.add.tween({ targets: this.stuck, props: { alpha: [0, 1] } })
                 this.stuck.once('pointerdown', () => this.scene.start('MainMenu'))
