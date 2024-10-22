@@ -15,6 +15,7 @@ export class Game extends Scene {
     stuck: Phaser.GameObjects.Image
     _dollars = 0
     cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
+    inMove: boolean=false;
 
     constructor() {
         super('Game');
@@ -92,9 +93,10 @@ export class Game extends Scene {
     // May not be allowed if it is too far away or there is a hole
     // If allowed, run the appropriate actions
     private moveTo(newx: number, newy: number) {
-        if (valid_move(this.player.tileX, this.player.tileY, newx, newy)) {
+        if (!this.inMove && valid_move(this.player.tileX, this.player.tileY, newx, newy)) {
             const new_tile = this.getTile(newx, newy);
             if (!new_tile?.hole) {
+                this.inMove = true
                 this.add.tween({ targets: this.player, props: { tileX: newx, tileY: newy }, duration: 500, onComplete: () => this.onMoveComplete() });
                 const tile = this.getTile(this.player.tileX, this.player.tileY);
                 tile?.setHasSeed(true);
@@ -122,6 +124,7 @@ export class Game extends Scene {
         return [tileLeft, tileRight, tileDown, tileUp]
     }
     onMoveComplete() {
+        this.inMove = false
         const x = this.player.tileX
         const y = this.player.tileY
         const tile = this.getTile(x, y)
