@@ -46,4 +46,5 @@ You can find it online; it's only about 42 lines of code. It is accompanied by a
 The 'fairly intelligent' comment is a lie; it just places the holes randomly. The 'continue for some time' part is all too true.
 
 In this version, you move by clicking the square to move to. If you get stuck and can afford the $40, click the heart icon in the top right.
+Alternatively, use the cursor keys to move and the SPACE key to spend.
 Everything else in the game play is the same.
