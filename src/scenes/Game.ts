@@ -15,7 +15,7 @@ export class Game extends Scene {
     stuck: Phaser.GameObjects.Image
     _dollars = 0
     cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
-    inMove: boolean=false;
+    inMove: boolean = false;
 
     constructor() {
         super('Game');
@@ -68,7 +68,8 @@ export class Game extends Scene {
     }
 
     onSpend() {
-        if (this.dollars >= MINSPEND) {
+        // If the 'Stuck' sign is showing, you can't spend your way out of it!
+        if (this.dollars >= MINSPEND && !this.stuck.visible) {
             this.dollars -= MINSPEND
             this.dollarSurround()
             const x = this.player.tileX
