@@ -6,9 +6,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                manualChunks: {
-                    phaser: ['phaser']
-                }
+                
             }
         },
         minify: 'terser',
