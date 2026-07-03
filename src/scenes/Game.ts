@@ -2,6 +2,7 @@ import { Scene } from 'phaser';
 import { FloorTile } from '../FloorTile';
 import { Player } from '../Player';
 import { unmapxy, valid_move } from '../util';
+import * as Phaser from "phaser"
 
 const MINSPEND = 40
 
