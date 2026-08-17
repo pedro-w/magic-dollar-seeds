@@ -1,7 +1,9 @@
 import { Scene } from "phaser";
 import { mapxy } from './util'
 export class FloorTile {
-    block: Phaser.GameObjects.Image
+    block: Phaser.GameObjects.Container
+    plain: Phaser.GameObjects.Image
+    seed: Phaser.GameObjects.Image
     dollar: Phaser.GameObjects.Image
     tileX: number
     tileY: number
@@ -15,8 +17,11 @@ export class FloorTile {
         this.tileX = x;
         this.tileY = y;
         const { x: px, y: py } = mapxy(x, y)
-        this.block = scene.add.image(px, py, 'block')
+        this.plain = scene.add.image(0, 0, 'block')
+        this.seed = scene.add.image(0, 0, 'seed-block')
+        this.block = scene.add.container(px, py, [this.plain, this.seed])
         this.dollar = scene.add.image(px, py - 40, 'dollar')
+        this.seed.alpha = 0.0
         this.dollar.alpha = 0.0
         this.dollar.active = false
     }
@@ -28,8 +33,13 @@ export class FloorTile {
     set hasSeed(yes: boolean) { this.setHasSeed(yes) }
     setHasSeed(yes: boolean): this {
         if (yes != this._seed) {
-            this.block.setTexture(yes ? 'seed-block' : 'block')
-            this._seed = yes
+            if (yes) {
+                this.scene.tweens.add({targets: this.seed, alpha: 1.0, duration: 1000})
+                this._seed = true
+            } else {
+                this.seed.alpha = 0.0
+                this._seed = false
+            }
         }
         return this
     }
